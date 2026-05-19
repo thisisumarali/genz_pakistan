@@ -1,5 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 const navLinks = [
   { label: "Courts", href: "#courts" },
@@ -52,10 +54,6 @@ export default function Navbar() {
           from { opacity: 0; transform: translateY(-8px); }
           to   { opacity: 1; transform: translateY(0); }
         }
-        .hamburger-bar {
-          transition: all 0.25s ease;
-          transform-origin: center;
-        }
         .book-btn {
           position: relative;
           overflow: hidden;
@@ -76,157 +74,45 @@ export default function Navbar() {
       `}</style>
 
       <header
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 100,
-          fontFamily: "'DM Sans', sans-serif",
-          transition:
-            "background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease",
-          background: scrolled ? "rgba(10,10,15,0.92)" : "transparent",
-          backdropFilter: scrolled ? "blur(16px)" : "none",
-          borderBottom: scrolled
-            ? "1px solid rgba(255,255,255,0.07)"
-            : "1px solid transparent",
-        }}
+        className={`fixed top-0 left-0 right-0 z-[100] font-['DM_Sans',sans-serif] transition-all duration-300 ${
+          scrolled
+            ? "bg-[rgba(10,10,15,0.92)] backdrop-blur-2xl border-b border-white/[0.07]"
+            : "bg-transparent border-b border-transparent"
+        }`}
       >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 1.5rem",
-            height: "68px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="max-w-[1200px] mx-auto px-6 h-[68px] flex items-center justify-between">
           {/* ── LOGO ── */}
-          <a
-            href="/"
-            style={{
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-            }}
-          >
-            {/* Icon mark */}
-            <div
-              style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "10px",
-                background: "rgba(163,230,53,0.12)",
-                border: "1px solid rgba(163,230,53,0.35)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-              }}
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <rect
-                  x="2"
-                  y="2"
-                  width="6"
-                  height="6"
-                  rx="1.5"
-                  fill="#a3e635"
-                />
-                <rect
-                  x="10"
-                  y="2"
-                  width="6"
-                  height="6"
-                  rx="1.5"
-                  fill="#a3e635"
-                  opacity="0.5"
-                />
-                <rect
-                  x="2"
-                  y="10"
-                  width="6"
-                  height="6"
-                  rx="1.5"
-                  fill="#a3e635"
-                  opacity="0.5"
-                />
-                <rect
-                  x="10"
-                  y="10"
-                  width="6"
-                  height="6"
-                  rx="1.5"
-                  fill="#a3e635"
-                />
-              </svg>
+          <a href="/" className="no-underline flex items-center gap-2.5">
+            {/* Icon mark - Grid layout */}
+            <div className="w-9 h-9 rounded-[10px] bg-lime-400/[0.12] border border-lime-400/[0.35] flex items-center justify-center flex-shrink-0">
+              <div className="grid grid-cols-2 gap-1 w-[18px] h-[18px]">
+                <div className="w-[7px] h-[7px] rounded-sm bg-lime-400" />
+                <div className="w-[7px] h-[7px] rounded-sm bg-lime-400 opacity-50" />
+                <div className="w-[7px] h-[7px] rounded-sm bg-lime-400 opacity-50" />
+                <div className="w-[7px] h-[7px] rounded-sm bg-lime-400" />
+              </div>
             </div>
 
             {/* Brand name */}
-            <div style={{ lineHeight: 1 }}>
-              <div
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontWeight: 900,
-                  fontSize: "17px",
-                  letterSpacing: "-0.02em",
-                  color: "#fff",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1px",
-                }}
-              >
+            <div className="leading-none">
+              <div className="font-['Syne',sans-serif] font-black text-[17px] tracking-tight text-white flex items-center gap-[1px]">
                 <span>Genz</span>
-                <span style={{ color: "#a3e635" }}>Pakistan</span>
-                <span
-                  className="logo-dot"
-                  style={{
-                    display: "inline-block",
-                    width: "5px",
-                    height: "5px",
-                    borderRadius: "50%",
-                    background: "#a3e635",
-                    marginLeft: "3px",
-                    marginBottom: "8px",
-                  }}
-                />
+                <span className="text-lime-400">Pakistan</span>
+                <span className="logo-dot inline-block w-[5px] h-[5px] rounded-full bg-lime-400 ml-[3px] mb-2" />
               </div>
-              <div
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: "9px",
-                  letterSpacing: "0.22em",
-                  color: "rgba(163,230,53,0.6)",
-                  fontWeight: 500,
-                  textTransform: "uppercase",
-                  marginTop: "1px",
-                }}
-              >
+              <div className="font-['DM_Sans',sans-serif] text-[9px] tracking-[0.22em] text-lime-400/60 font-medium uppercase mt-[1px]">
                 Indoor Arena
               </div>
             </div>
           </a>
 
           {/* ── DESKTOP NAV ── */}
-          <nav
-            style={{ display: "flex", alignItems: "center", gap: "32px" }}
-            className="hidden-mobile"
-          >
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="nav-link"
-                style={{
-                  color: "rgba(255,255,255,0.6)",
-                  fontSize: "13px",
-                  fontWeight: 500,
-                  textDecoration: "none",
-                  letterSpacing: "0.02em",
-                }}
+                className="nav-link text-white/60 text-[13px] font-medium no-underline tracking-[0.02em]"
               >
                 {link.label}
               </a>
@@ -234,55 +120,17 @@ export default function Navbar() {
           </nav>
 
           {/* ── RIGHT SIDE ── */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div className="flex items-center gap-3">
             {/* Live badge */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
-                background: "rgba(163,230,53,0.08)",
-                border: "1px solid rgba(163,230,53,0.2)",
-                borderRadius: "999px",
-                padding: "4px 10px",
-                fontSize: "11px",
-                color: "#a3e635",
-                fontFamily: "'Syne', sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-              }}
-              className="hidden-mobile"
-            >
-              <span
-                style={{
-                  width: "6px",
-                  height: "6px",
-                  borderRadius: "50%",
-                  background: "#a3e635",
-                  animation: "pulse-lime 1.8s ease-in-out infinite",
-                  display: "inline-block",
-                }}
-              />
+            <div className="hidden md:flex items-center gap-1.5 bg-lime-400/[0.08] border border-lime-400/20 rounded-full px-2.5 py-1 text-[11px] text-lime-400 font-['Syne',sans-serif] font-bold tracking-[0.1em]">
+              <span className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse inline-block" />
               LIVE SLOTS
             </div>
 
             {/* Book Now CTA */}
             <a
               href="#slot-section"
-              className="book-btn hidden-mobile"
-              style={{
-                display: "inline-block",
-                padding: "9px 20px",
-                borderRadius: "10px",
-                border: "1.5px solid #a3e635",
-                color: "#a3e635",
-                fontSize: "12px",
-                fontFamily: "'Syne', sans-serif",
-                fontWeight: 800,
-                letterSpacing: "0.1em",
-                textDecoration: "none",
-                textTransform: "uppercase",
-              }}
+              className="book-btn hidden md:inline-block px-5 py-2.5 rounded-[10px] border-[1.5px] border-lime-400 text-lime-400 text-xs font-['Syne',sans-serif] font-extrabold tracking-[0.1em] no-underline uppercase"
             >
               <span>Book Now</span>
             </a>
@@ -291,77 +139,28 @@ export default function Navbar() {
             <button
               onClick={() => setMobileOpen((p) => !p)}
               aria-label="Toggle menu"
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                display: "flex",
-                flexDirection: "column",
-                gap: "5px",
-                padding: "4px",
-              }}
-              className="show-mobile"
+              className="md:hidden bg-transparent border-none cursor-pointer p-1 text-2xl transition-colors duration-200"
             >
-              {[0, 1, 2].map((i) => (
-                <span
-                  key={i}
-                  className="hamburger-bar"
-                  style={{
-                    display: "block",
-                    width: i === 1 ? (mobileOpen ? "22px" : "16px") : "22px",
-                    height: "1.5px",
-                    background: mobileOpen
-                      ? "#a3e635"
-                      : "rgba(255,255,255,0.7)",
-                    borderRadius: "2px",
-                    transform: mobileOpen
-                      ? i === 0
-                        ? "rotate(45deg) translate(4.5px, 4.5px)"
-                        : i === 2
-                          ? "rotate(-45deg) translate(4.5px, -4.5px)"
-                          : "scaleX(0)"
-                      : "none",
-                  }}
-                />
-              ))}
+              {mobileOpen ? (
+                <IoClose className="text-lime-400" />
+              ) : (
+                <HiOutlineMenuAlt3 className="text-white/70" />
+              )}
             </button>
           </div>
         </div>
 
         {/* ── MOBILE MENU ── */}
         {mobileOpen && (
-          <div
-            className="mobile-menu"
-            style={{
-              background: "rgba(10,10,15,0.97)",
-              borderTop: "1px solid rgba(255,255,255,0.06)",
-              padding: "1.25rem 1.5rem 1.5rem",
-            }}
-          >
+          <div className="mobile-menu bg-[rgba(10,10,15,0.97)] border-t border-white/[0.06] px-6 py-5 md:hidden">
             {navLinks.map((link, i) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                style={{
-                  display: "block",
-                  padding: "12px 0",
-                  color: "rgba(255,255,255,0.7)",
-                  fontFamily: "'Syne', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "15px",
-                  letterSpacing: "0.06em",
-                  textDecoration: "none",
-                  borderBottom:
-                    i < navLinks.length - 1
-                      ? "1px solid rgba(255,255,255,0.05)"
-                      : "none",
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => (e.target.style.color = "#a3e635")}
-                onMouseLeave={(e) =>
-                  (e.target.style.color = "rgba(255,255,255,0.7)")
-                }
+                className={`block py-3 text-white/70 font-['Syne',sans-serif] font-bold text-[15px] tracking-[0.06em] no-underline transition-colors hover:text-lime-400 ${
+                  i < navLinks.length - 1 ? "border-b border-white/[0.05]" : ""
+                }`}
               >
                 {link.label}
               </a>
@@ -369,40 +168,16 @@ export default function Navbar() {
             <a
               href="#slot-section"
               onClick={() => setMobileOpen(false)}
-              style={{
-                display: "block",
-                marginTop: "16px",
-                padding: "13px",
-                background: "#a3e635",
-                color: "#000",
-                fontFamily: "'Syne', sans-serif",
-                fontWeight: 900,
-                fontSize: "13px",
-                letterSpacing: "0.12em",
-                textAlign: "center",
-                textDecoration: "none",
-                borderRadius: "12px",
-                textTransform: "uppercase",
-              }}
+              className="block mt-4 py-3.5 bg-lime-400 text-black font-['Syne',sans-serif] font-black text-[13px] tracking-[0.12em] text-center no-underline rounded-xl uppercase"
             >
               Book Now →
             </a>
           </div>
         )}
-
-        {/* Responsive helpers */}
-        <style>{`
-          .hidden-mobile { display: flex; }
-          .show-mobile   { display: none; }
-          @media (max-width: 768px) {
-            .hidden-mobile { display: none !important; }
-            .show-mobile   { display: flex !important; }
-          }
-        `}</style>
       </header>
 
       {/* Spacer so page content starts below fixed nav */}
-      <div style={{ height: "68px" }} />
+      <div className="h-[68px]" />
     </>
   );
 }
