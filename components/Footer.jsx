@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -164,8 +165,8 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-1.5 text-[11px] text-white/20 tracking-[0.05em] order-3 font-body">
-            <span>Made with</span>
-            <span className="text-lime-400">♥</span>
+            <span>Powered By </span>
+            <Link href="https://atmoclaw.com/" className="text-white font-bold">AtmoClaw</Link>
             <span>in Pakistan</span>
           </div>
         </div>
