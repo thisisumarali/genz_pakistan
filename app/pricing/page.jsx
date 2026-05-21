@@ -67,7 +67,7 @@ export default function PricingPage() {
           <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-white leading-none mb-3">
             Simple <span className="text-lime-400">Pricing</span>
           </h1>
-          <p className="text-zinc-400 text-sm max-w-md mx-auto">
+          <p className="text-zinc-100 text-sm max-w-md mx-auto">
             Flexible plans for every kind of player. No hidden fees, ever.
           </p>
 
@@ -149,7 +149,7 @@ export default function PricingPage() {
                             ? "text-lime-400"
                             : isViolet
                               ? "text-violet-400"
-                              : "text-zinc-400"
+                              : "text-zinc-100"
                         }
                       />
                       {f}

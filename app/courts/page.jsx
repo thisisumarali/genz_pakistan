@@ -98,7 +98,7 @@ export default function CourtsPage() {
           <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-white leading-none mb-3">
             All <span className="text-lime-400">Courts</span>
           </h1>
-          <p className="text-zinc-400 text-sm max-w-md">
+          <p className="text-zinc-100 text-sm max-w-md">
             Premium sports courts in Karachi. Pick your game, book your slot.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function CourtsPage() {
               className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-semibold border transition-all font-display tracking-wide ${
                 active === cat
                   ? "bg-lime-400 text-black border-lime-400"
-                  : "bg-white/5 text-zinc-400 border-white/10 hover:border-lime-400/40 hover:text-lime-300"
+                  : "bg-white/5 text-zinc-100 border-white/10 hover:border-lime-400/40 hover:text-lime-300"
               }`}
             >
               {cat}
@@ -173,7 +173,7 @@ export default function CourtsPage() {
         {/* Location note */}
         <div className="mt-12 flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10 w-fit">
           <FiMapPin size={16} className="text-lime-400" />
-          <p className="text-zinc-400 text-sm">
+          <p className="text-zinc-100 text-sm">
             All courts located in{" "}
             <span className="text-white font-semibold">Karachi, Pakistan</span>
           </p>

@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="font-display font-black text-2xl sm:text-[28px] text-lime-400 leading-none mb-1">
               {s.value}
             </div>
-            <div className="text-xs text-white/40 tracking-[0.08em] uppercase font-body">
+            <div className="text-xs text-zinc-300 tracking-[0.08em] uppercase font-body">
               {s.label}
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <p className="text-white/40 text-[13.5px] leading-7 max-w-[260px] mb-6 font-body">
+            <p className="text-zinc-300 text-[13.5px] leading-7 max-w-[260px] mb-6 font-body">
               Pakistan's freshest indoor sports arena, built for the next
               generation. Book, play, repeat.
             </p>
@@ -112,7 +112,7 @@ export default function Footer() {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([group, links]) => (
             <div key={group} className="lg:col-span-2">
-              <h4 className="font-display font-extrabold text-[11px] tracking-[0.18em] uppercase text-white/25 mb-4">
+              <h4 className="font-display font-extrabold text-[11px] tracking-[0.18em] uppercase text-zinc-200 mb-4">
                 {group}
               </h4>
               {links.map((l) => (
@@ -130,7 +130,7 @@ export default function Footer() {
             <div className="font-display font-extrabold text-[15px] text-white mb-1">
               Never miss a slot 🏏
             </div>
-            <div className="text-[12.5px] text-white/40 font-body">
+            <div className="text-[12.5px] text-zinc-300 font-body">
               Get early access to flash deals and tournament announcements.
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between border-t border-white/[0.06] pt-6 gap-4 sm:gap-4 text-center sm:text-left">
-          <p className="text-xs text-white/25 m-0 order-2 sm:order-1 font-body">
+          <p className="text-xs text-zinc-200 m-0 order-2 sm:order-1 font-body">
             © {new Date().getFullYear()} GenzPakistan Indoor Arena. All rights reserved.
           </p>
 
@@ -157,16 +157,16 @@ export default function Footer() {
               <a
                 key={t}
                 href="#"
-                className="text-xs text-white/25 no-underline transition-colors hover:text-lime-400 font-body"
+                className="text-xs text-zinc-200 no-underline transition-colors hover:text-lime-400 font-body"
               >
                 {t}
               </a>
             ))}
           </div>
 
-          <div className="flex items-center gap-1.5 text-[11px] text-white/20 tracking-[0.05em] order-3 font-body">
+          <div className="flex items-center gap-1.5 text-[11px] text-zinc-100 tracking-[0.05em] order-3 font-body">
             <span>Powered By </span>
-            <Link href="https://atmoclaw.com/" className="text-white font-bold">AtmoClaw</Link>
+            <Link href="https://atmoclaw.com/" className="text-lime-400 font-bold">AtmoClaw</Link>
             <span>in Pakistan</span>
           </div>
         </div>

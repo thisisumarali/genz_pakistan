@@ -216,7 +216,7 @@ export default function MainSection() {
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white mb-3">
                 Booking <span className="text-lime-400">Confirmed!</span>
               </h2>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-zinc-100 text-sm">
                 Your court has been reserved. See you on the court!
               </p>
             </div>
@@ -335,7 +335,7 @@ export default function MainSection() {
                 <h2 className="font-display text-3xl sm:text-5xl font-extrabold text-white leading-none mb-3">
                   Pick Your <span className="text-lime-400">Court</span>
                 </h2>
-                <p className="text-zinc-400 text-sm max-w-md">
+                <p className="text-zinc-100 text-sm max-w-md">
                   Tap any court to explore photos, then select for booking.
                 </p>
               </div>
@@ -349,7 +349,7 @@ export default function MainSection() {
                     className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 font-display tracking-wide ${
                       activeCategory === cat
                         ? "bg-lime-400 text-black border-lime-400 glow-lime-sm"
-                        : "bg-white/5 text-zinc-400 border-white/10 hover:border-lime-400/40 hover:text-lime-300"
+                        : "bg-white/5 text-zinc-100 border-white/10 hover:border-lime-400/40 hover:text-lime-300"
                     }`}
                   >
                     {cat}
@@ -430,7 +430,7 @@ export default function MainSection() {
                 <h2 className="font-display text-3xl sm:text-5xl font-extrabold text-white leading-none mb-3">
                   Book Your <span className="text-lime-400">Slot</span>
                 </h2>
-                <p className="text-zinc-400 text-sm max-w-md">
+                <p className="text-zinc-100 text-sm max-w-md">
                   {bookedCourt
                     ? `Booking for: ${bookedCourt.name} · ${bookedCourt.category}`
                     : "Select a court above to get started."}
@@ -439,7 +439,7 @@ export default function MainSection() {
 
               {/* Date Picker */}
               <div className="mb-8 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-                <label className="text-zinc-400 text-sm font-semibold font-display tracking-wide whitespace-nowrap flex items-center gap-2">
+                <label className="text-zinc-100 text-sm font-semibold font-display tracking-wide whitespace-nowrap flex items-center gap-2">
                   <FiCalendar size={15} className="text-lime-400" />
                   Choose Date
                 </label>
@@ -516,7 +516,7 @@ export default function MainSection() {
                           {selectedSlots.length} slot
                           {selectedSlots.length > 1 ? "s" : ""} selected
                         </p>
-                        <p className="text-zinc-400 text-xs leading-relaxed break-words">
+                        <p className="text-zinc-100 text-xs leading-relaxed break-words">
                           {selectedSlots.join(" · ")}
                         </p>
                       </div>
@@ -630,7 +630,7 @@ export default function MainSection() {
                 ].map((a) => (
                   <div
                     key={a}
-                    className="bg-white/[0.04] border border-white/8 rounded-xl py-2 px-2 sm:px-3 text-center text-xs text-zinc-400 flex flex-col items-center gap-1"
+                    className="bg-white/[0.04] border border-white/8 rounded-xl py-2 px-2 sm:px-3 text-center text-xs text-zinc-100 flex flex-col items-center gap-1"
                   >
                     <span className="text-lime-400/70">{amenityIcons[a]}</span>
                     <span className="leading-tight">{a}</span>

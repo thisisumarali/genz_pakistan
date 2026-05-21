@@ -114,7 +114,7 @@ export default function HeroSection() {
                     Own the Court
                   </span>
                 </h1>
-                <p className="text-zinc-400 text-base sm:text-lg lg:text-xl max-w-xl leading-relaxed">
+                <p className="text-zinc-100 text-base sm:text-lg lg:text-xl max-w-xl leading-relaxed">
                   Reserve premium sports facilities in Karachi. From padel to
                   cricket, book your favorite court in seconds.
                 </p>
@@ -215,7 +215,7 @@ export default function HeroSection() {
                         >
                           {sport.name}
                         </h3>
-                        <p className="text-zinc-400 text-sm mb-4">
+                        <p className="text-zinc-100 text-sm mb-4">
                           {sport.count}
                         </p>
                         <div className="flex items-center gap-2 text-xs text-zinc-500 group-hover:text-lime-400 transition-colors">

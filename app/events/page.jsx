@@ -114,7 +114,7 @@ export default function EventsPage() {
           <h1 className="font-display text-4xl sm:text-5xl font-extrabold text-white leading-none mb-3">
             Upcoming <span className="text-lime-400">Events</span>
           </h1>
-          <p className="text-zinc-400 text-sm max-w-md">
+          <p className="text-zinc-100 text-sm max-w-md">
             Join tournaments, leagues & community games. Compete, connect, win.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function EventsPage() {
               className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-semibold border transition-all font-display tracking-wide ${
                 filter === c
                   ? "bg-lime-400 text-black border-lime-400"
-                  : "bg-white/5 text-zinc-400 border-white/10 hover:border-lime-400/40 hover:text-lime-300"
+                  : "bg-white/5 text-zinc-100 border-white/10 hover:border-lime-400/40 hover:text-lime-300"
               }`}
             >
               {c}
@@ -170,7 +170,7 @@ export default function EventsPage() {
                   </div>
                 </div>
                 <div className="p-4">
-                  <div className="flex flex-wrap gap-3 mb-4 text-xs text-zinc-400">
+                  <div className="flex flex-wrap gap-3 mb-4 text-xs text-zinc-100">
                     <span className="flex items-center gap-1">
                       <FiCalendar size={12} className="text-lime-400" />
                       {ev.date}
