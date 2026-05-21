@@ -166,7 +166,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-1.5 text-[11px] text-zinc-100 tracking-[0.05em] order-3 font-body">
             <span>Powered By </span>
-            <Link href="https://atmoclaw.com/" className="text-lime-400 font-bold">AtmoClaw</Link>
+            <Link href="https://atmoclaw.com/" className="text-lime-400 font-extrabold">AtmoClaw</Link>
             <span>in Pakistan</span>
           </div>
         </div>
