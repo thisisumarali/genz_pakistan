@@ -99,7 +99,7 @@ export default function Footer() {
                   <a
                     key={s.label}
                     href={s.href}
-                    className="w-[38px] h-[38px] rounded-[10px] bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/50 no-underline transition-all duration-200 hover:bg-lime-400/[0.12] hover:border-lime-400/40 hover:text-lime-400 hover:-translate-y-0.5 flex-shrink-0"
+                    className="w-[38px] h-[38px] rounded-[10px] bg-white/[0.04] border border-white/10 flex items-center justify-center text-zinc-300 no-underline transition-all duration-200 hover:bg-lime-400/[0.12] hover:border-lime-400/40 hover:text-lime-400 hover:-translate-y-0.5 flex-shrink-0"
                     aria-label={s.label}
                   >
                     <Icon className="text-base" />
