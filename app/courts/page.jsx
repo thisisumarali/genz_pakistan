@@ -86,7 +86,7 @@ export default function CourtsPage() {
     active === "All" ? courts : courts.filter((c) => c.category === active);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white px-4 pt-24 pb-20">
+    <div className="min-h-screen bg-[#0a0a0f] text-white px-4 pt-24 pb-20 overflow-x-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
