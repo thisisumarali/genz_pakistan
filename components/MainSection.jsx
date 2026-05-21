@@ -197,35 +197,8 @@ export default function MainSection() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white font-sans">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap');
-        * { box-sizing: border-box; }
-        body { background: #0a0a0f; }
-        .font-display { font-family: 'Syne', sans-serif; }
-        .font-body { font-family: 'DM Sans', sans-serif; }
-        .glow-lime { box-shadow: 0 0 24px rgba(163,230,53,0.25); }
-        .glow-lime-sm { box-shadow: 0 0 12px rgba(163,230,53,0.15); }
-        .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(163,230,53,0.12); }
-        .slot-btn { transition: all 0.18s ease; }
-        .slot-btn:hover:not(:disabled) { transform: scale(1.04); }
-        .slot-btn:active:not(:disabled) { transform: scale(0.97); }
-        .modal-overlay { animation: fadeIn 0.2s ease; }
-        .modal-box { animation: slideUp 0.25s ease; }
-        .success-box { animation: slideUp 0.4s ease; }
-        @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
-        @keyframes slideUp { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
-        @keyframes pulse-ring { 0%,100% { box-shadow: 0 0 0 0 rgba(163,230,53,0.4) } 50% { box-shadow: 0 0 0 16px rgba(163,230,53,0) } }
-        .pulse-lime { animation: pulse-ring 2s ease infinite; }
-        .img-thumb { transition: all 0.2s ease; cursor: pointer; }
-        .img-thumb:hover { transform: scale(1.05); border-color: #a3e635 !important; }
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-        input[type='date']::-webkit-calendar-picker-indicator { filter: invert(1) sepia(1) saturate(3) hue-rotate(60deg); cursor: pointer; }
-      `}</style>
-
-      {/* ── SUCCESS STATE ── */}
+    <div className="min-h-screen bg-[#0a0a0f] text-white font-body" id="court">
+{/* ── SUCCESS STATE ── */}
       {bookingConfirmed && confirmedDetails && (
         <section className="relative px-4 pt-16 pb-20 font-body flex items-center justify-center min-h-screen">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/8 blur-[120px] rounded-full pointer-events-none" />
